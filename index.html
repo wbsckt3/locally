@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Google Sign-In -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.9/lib/index.js"></script>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Leaflet JS -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- CDN verification script -->
+    <script>
+      window.addEventListener('load', function() {
+        console.log('🔍 Verificando CDNs...');
+        
+        // Verificar Phosphor Icons
+        if (typeof window.PhosphorIcons !== 'undefined') {
+          console.log('✅ Phosphor Icons cargado correctamente');
+        } else {
+          console.error('❌ Phosphor Icons no se cargó correctamente');
+        }
+        
+        // Verificar Leaflet
+        console.log('L disponible:', typeof L !== 'undefined');
+        if (typeof L !== 'undefined') {
+          console.log('✅ Leaflet cargado correctamente');
+          console.log('Versión:', L.version);
+        } else {
+          console.error('❌ Leaflet no se cargó correctamente');
+        }
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Locally - Oportunidades de Servicio</title>
+    
+    <!-- Google Sign-In -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Leaflet JS -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Alternative Leaflet loading -->
+    <script>
+      // Make Leaflet available globally
+      window.addEventListener('load', function() {
+        if (typeof L !== 'undefined') {
+          console.log('✅ Leaflet disponible globalmente');
+          window.Leaflet = L;
+        }
+      });
+    </script>
+    
+    <!-- Leaflet verification script -->
+    <script>
+      window.addEventListener('load', function() {
+        console.log('🔍 Verificando Leaflet...');
+        console.log('L disponible:', typeof L !== 'undefined');
+        if (typeof L !== 'undefined') {
+          console.log('✅ Leaflet cargado correctamente');
+          console.log('Versión:', L.version);
+        } else {
+          console.error('❌ Leaflet no se cargó correctamente');
+        }
+      });
+    </script>
+    <script type="module" crossorigin src="/locally/assets/index-CRFlcsDg.js"></script>
+    <link rel="stylesheet" crossorigin href="/locally/assets/index-DQoLeWdm.css">
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
